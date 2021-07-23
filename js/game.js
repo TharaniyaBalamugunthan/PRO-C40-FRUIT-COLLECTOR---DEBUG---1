@@ -56,9 +56,15 @@ class Game{
                      players[index - 1].y = y;
                        
                      if(index === player.index){
+
+                        fill("black");
+                        textSize(30);
+                        strokeWeight(3);
                          
                        //add code to display the player's name on the respective basket.
+
                        text(allPlayers[plr].name,x-25,y+25);
+
                        
                          
                      }
@@ -98,6 +104,8 @@ class Game{
                     for (var i = 0; i < fruitGroup.length; i++) {
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
+
+                          
                          
                             
                         }
