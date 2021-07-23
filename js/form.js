@@ -39,18 +39,14 @@ class Form{
             player.update();
             player.updateCount(playerCount);
             this.greeting.html("Hello " + player.name)
-            this.greeting.position(500,250);
+            this.greeting.position(550,250);
             this.greeting.style('color', 'white');
             this.greeting.style('font-size', '100px');
         });
 
         this.reset.mousePressed(() => {
-            //add code to reset the values of the gameState and the playerCount nodes to 0 in the database
             player.updateCount(0);
             game.update(0);
-            var playerInfoRef = database.ref('players');
-            playerInfoRef.remove();
-            
         });
 
     }

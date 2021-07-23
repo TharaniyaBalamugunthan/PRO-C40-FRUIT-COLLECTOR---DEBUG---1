@@ -56,21 +56,19 @@ class Game{
                      players[index - 1].y = y;
                        
                      if(index === player.index){
-
-                        fill("black");
+                         
+                        fill("white");
                         textSize(30);
-                        strokeWeight(3);
-                         
-                       //add code to display the player's name on the respective basket.
+                        text(allPlayers[plr].name ,x-25,y+25);
 
-                       text(allPlayers[plr].name,x-25,y+25);
-
-                       
-                         
                      }
                     
+                     //text to display player score.
+                     text("Player 1:"+allPlayers.player1.score,50,50);
+                     text("Player 2:"+allPlayers.player2.score,50,100);
+
                  }
-                                                 
+
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
                     player.distance -= 10
                     player.update();
@@ -105,20 +103,14 @@ class Game{
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
 
-                          
-                         
+                            player.update();
+                            player.score =player.score+1;
                             
+            
                         }
                         
                     }
-                  }
-                
-
-         
-         
-        
-         
-
+                }
     }
 
     end(){
