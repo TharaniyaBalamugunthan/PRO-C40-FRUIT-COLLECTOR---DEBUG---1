@@ -59,7 +59,7 @@ class Game{
 
                         fill("black");
                         textSize(30);
-                        strokeWeight(3);
+                        strokeWeight(7);
                          
                        //add code to display the player's name on the respective basket.
 
