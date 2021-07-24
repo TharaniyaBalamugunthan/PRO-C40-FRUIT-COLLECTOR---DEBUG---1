@@ -3,8 +3,7 @@ class Player {
         this.index = null;
         this.distance = 0;
         this.name = null;
-          // create the property for the score and intialize with zero
-          this.score = 0;
+        this.score =0;
     }
 
     getCount() {
